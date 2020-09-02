@@ -1,0 +1,57 @@
+plugins {
+    id 'groovy'
+    id 'java'
+    id 'java-library'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group 'org.gias.studio'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all
+    compile 'org.codehaus.groovy:groovy-all:3.0.5'
+
+    // https://mvnrepository.com/artifact/org.openjfx/javafx
+    compile 'org.openjfx:javafx-controls:16-ea+1'
+    compile 'org.openjfx:javafx-base:16-ea+1'
+    compile 'org.openjfx:javafx:16-ea+1'
+    compile 'org.openjfx:javafx-graphics:16-ea+1'
+    compile 'org.openjfx:javafx-fxml:16-ea+1'
+    compile 'org.openjfx:javafx-web:16-ea+1'
+
+    // https://mvnrepository.com/artifact/org.controlsfx/controlsfx
+    compile group: 'org.controlsfx', name: 'controlsfx', version: '11.0.2'
+
+    // https://mvnrepository.com/artifact/com.orientechnologies/orientdb-graphdb
+    compile group: 'com.orientechnologies', name: 'orientdb-graphdb', version: '3.1.1'
+
+    // https://mvnrepository.com/artifact/org.xeustechnologies/jcl-core
+    compile group: 'org.xeustechnologies', name: 'jcl-core', version: '2.8'
+
+    // https://mvnrepository.com/artifact/org.reflections/reflections
+    compile group: 'org.reflections', name: 'reflections', version: '0.9.12'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+javafx {
+    version = '14'
+    modules = [ 'javafx.base', 'javafx.controls', 'javafx.fxml', 'javafx.graphics', 'javafx.web' ]
+}
+
+//jar {
+//    manifest {
+//        attributes('Implementation-Title': project.name,
+//                'Implementation-Version': project.version)
+//    }
+//
+//}
+
+// https://mvnrepository.com/artifact/org.groovyfx/groovyfx
+//compile group: 'org.groovyfx', name: 'groovyfx', version: '8.0.0'
